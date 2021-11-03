@@ -5,7 +5,7 @@ type ProgressBarProps = {
 }
 
 export default function ProgressBar({ progress }: ProgressBarProps) {
-  const percentage = progress * 100 - 100
+  const percentage = Math.min(progress * 100 - 100, 0)
 
   return (
     <StyledProgressBar>

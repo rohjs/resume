@@ -38,7 +38,7 @@ export default function Layout({ children }: LayoutProps) {
   })
 
   return (
-    <StyledLayout>
+    <StyledLayout translate="no">
       <ProgressBar progress={progress} />
       <main ref={mainRef} onScroll={updateProgress}>
         <div ref={contentRef}>{children}</div>
