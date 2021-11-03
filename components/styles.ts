@@ -10,16 +10,23 @@ export const StyledLayout = styled.div`
   main {
     flex-grow: 1;
     width: 100%;
+    padding: 3rem 0;
     overflow-y: auto;
 
     > div {
-      max-width: 640px;
+      max-width: 45rem;
       padding: 0 16px;
       margin: 0 auto;
     }
 
     &::-webkit-scrollbar {
       display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    main {
+      padding: 6rem 0;
     }
   }
 `
@@ -46,3 +53,152 @@ export const StyledProgressBar = styled.div`
     height: 20px;
   }
 `
+
+export const StyledCover = styled.section`
+  margin-bottom: 3rem;
+
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 4.5rem;
+
+    h1 {
+      margin-bottom: 3rem;
+      font-size: 6rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+`
+
+export const StyledCard = styled.article`
+  padding: 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #efedee;
+  }
+
+  header {
+    margin-bottom: 1.5rem;
+
+    h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+
+    dl {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 3rem 0;
+    font-size: 1.25rem;
+
+    header {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      dl {
+        margin-bottom: 0.25rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+    }
+  }
+`
+
+export const StyledWorkCard = styled(StyledCard)`
+  header {
+    h2 {
+      word-break: break-all;
+    }
+  }
+  .content {
+    flex-grow: 1;
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+
+    h4 {
+      padding: 0.25rem 0;
+      font-size: 1rem;
+
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    header {
+      width: 39%;
+      padding-right: 2rem;
+    }
+
+    .content {
+      flex-grow: 1;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+
+        &:not(:first-child) {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+`
+
+export const StyledSkillCard = styled(StyledCard)`
+  li {
+    position: relative;
+    padding-left: 0.75rem;
+
+    &::before {
+      position: absolute;
+      top: 0.5rem;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      background-color: #000;
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    li::before {
+      top: 0.75rem;
+    }
+  }
+`
+
+export const StyledEtcCard = styled(StyledCard)``
