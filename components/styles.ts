@@ -111,6 +111,16 @@ export const StyledCard = styled.article`
     }
   }
 
+  h2,
+  h3,
+  h4 {
+    a::after {
+      margin-left: 0.15em;
+      font-weight: 400;
+      content: '↗️';
+    }
+  }
+
   @media screen and (min-width: 768px) {
     padding: 3rem 0;
     font-size: 1.25rem;

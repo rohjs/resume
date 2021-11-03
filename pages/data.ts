@@ -11,9 +11,9 @@ export const works: Work[] = [
         description: '프레스토테크놀로지!!!',
         details: ['1', '2'],
         techStacks: ['React', 'Redux', 'TypeScript', 'WebSocket', 'Sass'],
+        projectUrl: 'https://aqx.com/',
       },
     ],
-    url: 'https://aqx.com',
     serviceAvailable: true,
   },
   {
@@ -28,9 +28,9 @@ export const works: Work[] = [
         description: '부스트아이오',
         details: ['1', '2'],
         techStacks: ['React', 'Redux', 'TypeScript', 'Styled Components'],
+        projectUrl: 'https://issuehunt.io/',
       },
     ],
-    url: 'https://issuehunt.io/',
     serviceAvailable: true,
   },
   {
@@ -46,7 +46,6 @@ export const works: Work[] = [
         techStacks: ['React', 'Redux', 'TypeScript', 'Typed Styles'],
       },
     ],
-    url: 'https://aqx.com',
     serviceAvailable: false,
   },
 ]
@@ -84,7 +83,6 @@ export const data: Data[] = [
   },
   {
     title: '서강대학교 Art & Technology',
-    details: ['Figma', 'Sketchapp'],
-    url: 'http://creative.sogang.ac.kr/',
+    details: ['2020.2 졸업'],
   },
 ]

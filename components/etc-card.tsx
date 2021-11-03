@@ -11,9 +11,13 @@ export default function EtcCard({ data }: EtcCardProps) {
     <StyledEtcCard>
       <header>
         <h2>
-          <a href={url} target="_blank" rel="noreferrer">
-            {title}
-          </a>
+          {url ? (
+            <a href={url} target="_blank" rel="noreferrer">
+              {title}
+            </a>
+          ) : (
+            title
+          )}
         </h2>
       </header>
 

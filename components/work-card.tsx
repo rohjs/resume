@@ -44,12 +44,21 @@ export default function WorkCard({ work }: WorkCardProps) {
 
       <div className="content">
         {projects.map((project) => {
-          const { description, details, title, techStacks } = project
+          const { description, details, title, techStacks, projectUrl } =
+            project
           const key = `${company}-${title}`
 
           return (
             <div key={key}>
-              <h3>{title}</h3>
+              <h3>
+                {projectUrl ? (
+                  <a href={projectUrl} target="_blank" rel="noreferrer">
+                    {title}
+                  </a>
+                ) : (
+                  title
+                )}
+              </h3>
 
               <h4 className="visually-hidden">Description</h4>
               <p>{description}</p>

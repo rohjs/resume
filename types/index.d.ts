@@ -5,7 +5,6 @@ declare interface Work {
   startedAt: number
   endedAt: number | null
   projects: Project[]
-  url: string
   serviceAvailable: boolean
 }
 
@@ -14,6 +13,7 @@ declare interface Project {
   description: string
   details: string[]
   techStacks: string[]
+  projectUrl?: string
 }
 
 declare interface Skill {
@@ -24,5 +24,5 @@ declare interface Skill {
 declare interface Data {
   title: string
   details: string[]
-  url: string
+  url?: string
 }
