@@ -23,9 +23,19 @@ export default function EtcCard({ data }: EtcCardProps) {
 
       <div className="content">
         <ul>
-          {details.map((detail) => (
-            <li key={detail}>{detail}</li>
-          ))}
+          {details.map((detail) => {
+            const regex = /\(([^)]+)\)/
+            const hasUrl = detail.match(regex)
+            if (!hasUrl) return <li key={detail}>{detail}</li>
+            const [, url] = hasUrl
+            return (
+              <li key={detail}>
+                <a href={url} target="_blank" rel="noreferrer">
+                  {detail.replace(regex, '')}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </StyledEtcCard>

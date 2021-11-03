@@ -237,4 +237,12 @@ export const StyledSkillCard = styled(StyledCard)`
   }
 `
 
-export const StyledEtcCard = styled(StyledCard)``
+export const StyledEtcCard = styled(StyledCard)`
+  li {
+    a::after {
+      margin-left: 0.15em;
+      font-weight: 400;
+      content: '↗️';
+    }
+  }
+`

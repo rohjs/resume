@@ -106,18 +106,21 @@ export const skills: Skill[] = [
 export const data: Data[] = [
   {
     title: '오픈소스 프로젝트',
-    details: ['prismy', 'Typescript 번역'],
-    url: 'http://creative.sogang.ac.kr/',
+    details: [
+      'prismy(https://github.com/prismyland/prismy)',
+      'Typescript 번역(https://github.com/rohjs/typescript-book)',
+    ],
   },
   {
-    title: 'YouTube 김버그',
-    details: ['hahaha', 'bealsdfj'],
-    url: 'https://www.youtube.com/c/kimbug',
+    title: '유튜브 크리에이터 🎥',
+    details: ['김버그 유튜브 채널(https://www.youtube.com/c/kimbug)'],
   },
   {
     title: '구름에듀 온라인 강의',
-    details: ['Figma', 'Sketchapp'],
-    url: 'https://bit.ly/3BH0j8X',
+    details: [
+      '김버그의 UI 개발 부트캠프(https://bit.ly/31lsOw9)',
+      '김버그의 HTML & CSS는 재밌다(https://bit.ly/3GLXreq)',
+    ],
   },
   {
     title: '서강대학교 Art & Technology',
