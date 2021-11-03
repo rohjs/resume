@@ -5,7 +5,7 @@ export const StyledSection = styled.section`
 
   h1 {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: -0.02em;

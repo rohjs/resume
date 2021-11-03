@@ -53,7 +53,7 @@ export default function WorkCard({ work }: WorkCardProps) {
 
               <h4 className="visually-hidden">Description</h4>
               <p>{description}</p>
-              <h4>Skills</h4>
+              <h4>Details</h4>
               <ul>
                 {details.map((detail) => (
                   <li key={detail}>{detail}</li>

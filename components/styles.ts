@@ -90,20 +90,24 @@ export const StyledCard = styled.article`
   letter-spacing: -0.015em;
 
   &:not(:last-child) {
-    border-bottom: 1px solid #efedee;
+    border-bottom: 1px solid #e0e2e7;
   }
 
   header {
     margin-bottom: 1.5rem;
 
     h2 {
+      padding-bottom: 0.25rem;
       margin-bottom: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       line-height: 1.2;
+      word-break: break-all;
     }
 
     dl {
       font-size: 0.75rem;
+      letter-spacing: 0;
+      color: #3f4150;
     }
   }
 
@@ -118,35 +122,29 @@ export const StyledCard = styled.article`
 
       dl {
         margin-bottom: 0.25rem;
-        font-size: 0.8rem;
-        font-weight: 500;
-        line-height: 1.2;
+        font-size: 1rem;
+        line-height: 1.3;
       }
     }
   }
 `
 
 export const StyledWorkCard = styled(StyledCard)`
-  header {
-    h2 {
-      word-break: break-all;
-    }
-  }
   .content {
     flex-grow: 1;
 
     h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
+      padding-bottom: 0.25rem;
+      font-size: 1rem;
       line-height: 1.2;
     }
 
     h4 {
-      padding: 0.25rem 0;
-      font-size: 1rem;
+      padding: 0.15rem 0;
+      font-size: 0.8rem;
 
       &:not(:first-child) {
-        margin-top: 1rem;
+        margin-top: 0.75rem;
       }
     }
   }
@@ -163,10 +161,12 @@ export const StyledWorkCard = styled(StyledCard)`
       flex-grow: 1;
 
       h3 {
+        margin-bottom: 0.5rem;
         font-size: 1.5rem;
       }
 
       h4 {
+        padding: 0.25rem 0;
         font-size: 1.2rem;
 
         &:not(:first-child) {
