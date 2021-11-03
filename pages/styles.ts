@@ -9,6 +9,7 @@ export const StyledSection = styled.section`
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: -0.02em;
+    user-select: none;
 
     &::after {
       margin-left: 0.1em;

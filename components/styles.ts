@@ -86,7 +86,7 @@ export const StyledCover = styled.section`
 export const StyledCard = styled.article`
   padding: 1.5rem 0;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
   letter-spacing: -0.015em;
 
   &:not(:last-child) {
@@ -121,9 +121,26 @@ export const StyledCard = styled.article`
     }
   }
 
+  li {
+    position: relative;
+    padding-left: 0.75rem;
+
+    &::before {
+      position: absolute;
+      top: 0.5rem;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      background-color: #000;
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
   @media screen and (min-width: 768px) {
     padding: 3rem 0;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
 
     header {
       h2 {
@@ -136,10 +153,18 @@ export const StyledCard = styled.article`
         line-height: 1.3;
       }
     }
+
+    li::before {
+      top: 0.75rem;
+    }
   }
 `
 
 export const StyledWorkCard = styled(StyledCard)`
+  header {
+    flex-shrink: 0;
+  }
+
   .content {
     flex-grow: 1;
 
@@ -152,6 +177,7 @@ export const StyledWorkCard = styled(StyledCard)`
     h4 {
       padding: 0.15rem 0;
       font-size: 0.8rem;
+      user-select: none;
 
       &:not(:first-child) {
         margin-top: 0.75rem;
