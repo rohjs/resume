@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+import { works, skills, data } from './data'
+import {
+  Contact,
+  Cover,
+  EtcCard,
+  Layout,
+  SkillCard,
+  WorkCard,
+} from './components'
+import { StyledSection } from './styles'
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Layout>
+      <Cover />
+
+      <StyledSection>
+        <h1>Work Experience</h1>
+        {works.map((work) => (
+          <WorkCard key={work.company} work={work} />
+        ))}
+      </StyledSection>
+
+      <StyledSection>
+        <h1>Skills</h1>
+        {skills.map((skill) => (
+          <SkillCard key={skill.title} skill={skill} />
+        ))}
+      </StyledSection>
+
+      <StyledSection>
+        <h1>Etc</h1>
+        {data.map((datum) => (
+          <EtcCard key={datum.title} data={datum} />
+        ))}
+      </StyledSection>
+
+      <StyledSection>
+        <h1>Contact</h1>
+        <Contact />
+      </StyledSection>
+    </Layout>
+  )
 }
 
-export default App;
+export default App
