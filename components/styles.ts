@@ -55,6 +55,7 @@ export const StyledProgressBar = styled.div`
 `
 
 export const StyledCover = styled.section`
+  padding-top: 1.5rem;
   margin-bottom: 3rem;
 
   h1 {
@@ -113,7 +114,8 @@ export const StyledCard = styled.article`
 
   h2,
   h3,
-  h4 {
+  h4,
+  li {
     a::after {
       margin-left: 0.15em;
       font-weight: 400;
@@ -246,16 +248,6 @@ export const StyledSkillCard = styled(StyledCard)`
   @media screen and (min-width: 768px) {
     li::before {
       top: 0.75rem;
-    }
-  }
-`
-
-export const StyledEtcCard = styled(StyledCard)`
-  li {
-    a::after {
-      margin-left: 0.15em;
-      font-weight: 400;
-      content: '↗️';
     }
   }
 `

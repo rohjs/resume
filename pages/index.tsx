@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import { works, skills, data } from './data'
 import Cover from '../components/cover'
+import Contact from '../components/contact'
 import EtcCard from '../components/etc-card'
 import SkillCard from '../components/skill-card'
 import WorkCard from '../components/work-card'
@@ -33,6 +34,11 @@ const Home: NextPage = () => {
         {data.map((datum) => (
           <EtcCard key={datum.title} data={datum} />
         ))}
+      </StyledSection>
+
+      <StyledSection>
+        <h1>Contact</h1>
+        <Contact />
       </StyledSection>
     </div>
   )

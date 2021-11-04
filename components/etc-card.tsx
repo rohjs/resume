@@ -1,4 +1,4 @@
-import { StyledEtcCard } from './styles'
+import { StyledCard } from './styles'
 
 type EtcCardProps = {
   data: Data
@@ -8,7 +8,7 @@ export default function EtcCard({ data }: EtcCardProps) {
   const { title, details, url } = data
 
   return (
-    <StyledEtcCard>
+    <StyledCard>
       <header>
         <h2>
           {url ? (
@@ -38,6 +38,6 @@ export default function EtcCard({ data }: EtcCardProps) {
           })}
         </ul>
       </div>
-    </StyledEtcCard>
+    </StyledCard>
   )
 }
