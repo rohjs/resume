@@ -119,7 +119,7 @@ export default function App({ Component, pageProps }: AppProps) {
           />
           <link rel="manifest" href="/site.webmanifest" />
           <link
-            href="http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
             rel="stylesheet"
             type="text/css"
           ></link>
