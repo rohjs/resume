@@ -1,14 +1,13 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
 
-import { works, skills, data } from './data'
+import { works, skills, data } from '../public/data'
 import Cover from '../components/cover'
 import Contact from '../components/contact'
 import EtcCard from '../components/etc-card'
 import SkillCard from '../components/skill-card'
 import WorkCard from '../components/work-card'
 
-import { StyledSection } from './styles'
+import { StyledSection } from '../styles'
 
 const Home: NextPage = () => {
   return (
