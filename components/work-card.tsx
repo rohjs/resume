@@ -6,7 +6,15 @@ type WorkCardProps = {
 }
 
 export default function WorkCard({ work }: WorkCardProps) {
-  const { company, companyUrl, role, startedAt, endedAt, projects } = work
+  const {
+    company,
+    companyUrl,
+    role,
+    startedAt,
+    endedAt,
+    projects,
+    serviceAvailable,
+  } = work
 
   return (
     <StyledWorkCard>
@@ -40,6 +48,8 @@ export default function WorkCard({ work }: WorkCardProps) {
             )}
           </dd>
         </dl>
+
+        {!serviceAvailable && <strong> (서비스 종료)</strong>}
       </header>
 
       <div className="content">

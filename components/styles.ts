@@ -66,7 +66,7 @@ export const StyledCover = styled.section`
 
   p {
     font-size: 1.2rem;
-    line-height: 1.4;
+    line-height: 1.7;
   }
 
   @media screen and (min-width: 768px) {
@@ -78,7 +78,7 @@ export const StyledCover = styled.section`
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
   }
 `
@@ -163,6 +163,14 @@ export const StyledCard = styled.article`
 export const StyledWorkCard = styled(StyledCard)`
   header {
     flex-shrink: 0;
+
+    strong {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: #3f4150;
+    }
   }
 
   .content {
@@ -191,6 +199,11 @@ export const StyledWorkCard = styled(StyledCard)`
     header {
       width: 39%;
       padding-right: 2rem;
+
+      strong {
+        font-size: 0.75rem;
+        line-height: 1.3;
+      }
     }
 
     .content {
