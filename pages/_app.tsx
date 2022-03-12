@@ -5,6 +5,10 @@ import { GlobalStyle } from 'styles'
 import Layout from 'components/layout'
 
 export default function App({ Component, pageProps }: AppProps) {
+  function getAssetPath(value: string) {
+    return process.env.NODE_ENV === 'development' ? '/' : `/resume/${value}`
+  }
+
   return (
     <>
       <GlobalStyle />
@@ -19,27 +23,27 @@ export default function App({ Component, pageProps }: AppProps) {
           <link
             rel="apple-touch-icon"
             sizes="76x76"
-            href="/images/apple-touch-icon.png"
+            href={getAssetPath('images/apple-touch-icon.png')}
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/images/favicon-32x32.png"
+            href={getAssetPath('images/favicon-32x32.png')}
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/images/favicon-16x16.png"
+            href={getAssetPath('images/favicon-16x16.png')}
           />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="icon" href={getAssetPath('favicon.ico')} />
+          <link rel="manifest" href={getAssetPath('site.webmanifest')} />
           <link
             href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
             rel="stylesheet"
             type="text/css"
-          ></link>
+          />
           <meta name="theme-color" content="#ffffff"></meta>
         </Head>
         <Component {...pageProps} />

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
+
 module.exports = {
   reactStrictMode: true,
-  assetPrefix: '/resume/',
+  assetPrefix: process.env.NODE_ENV === 'development' ? '/' : '/resume/',
 }
