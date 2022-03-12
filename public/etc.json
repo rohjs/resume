@@ -1,0 +1,24 @@
+[
+  {
+    "title": "오픈소스 프로젝트 🚀",
+    "details": [
+      "prismy(https://github.com/prismyland/prismy)",
+      "Deep Dive TypeScript 번역(https://github.com/rohjs/typescript-book)"
+    ]
+  },
+  {
+    "title": "유튜브 크리에이터 🎥",
+    "details": ["김버그 유튜브 채널(https://www.youtube.com/c/kimbug)"]
+  },
+  {
+    "title": "구름에듀 온라인 강의 ☁️",
+    "details": [
+      "김버그의 UI 개발 부트캠프(https://bit.ly/31lsOw9)",
+      "김버그의 HTML & CSS는 재밌다(https://bit.ly/3GLXreq)"
+    ]
+  },
+  {
+    "title": "서강대학교 Art & Technology 🎓",
+    "details": ["2020.2 서강대학교 지식융합학부 Art & Technology학 졸업"]
+  }
+]

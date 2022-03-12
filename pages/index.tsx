@@ -1,15 +1,19 @@
 import type { NextPage } from 'next'
+import { StyledSection } from 'styles'
 
-import { works, skills, data } from '../public/data'
-import Cover from '../components/cover'
-import Contact from '../components/contact'
-import EtcCard from '../components/etc-card'
-import SkillCard from '../components/skill-card'
-import WorkCard from '../components/work-card'
+import Cover from 'components/cover'
+import Contact from 'components/contact'
+import EtcCard from 'components/etc-card'
+import SkillCard from 'components/skill-card'
+import WorkCard from 'components/work-card'
 
-import { StyledSection } from '../styles'
+type HomeProps = {
+  works: Work[]
+  skills: Skill[]
+  data: Data[]
+}
 
-const Home: NextPage = () => {
+const Home: NextPage<HomeProps> = ({ works, skills, data }) => {
   return (
     <div>
       <Cover />
@@ -44,3 +48,21 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export async function getStaticProps() {
+  const worksRes = await fetch(`${process.env.HOSTNAME}/works.json`)
+  const skillsRes = await fetch(`${process.env.HOSTNAME}/skills.json`)
+  const etcRes = await fetch(`${process.env.HOSTNAME}/etc.json`)
+
+  const works = await worksRes.json()
+  const skills = await skillsRes.json()
+  const data = await etcRes.json()
+
+  return {
+    props: {
+      works,
+      skills,
+      data,
+    },
+  }
+}
